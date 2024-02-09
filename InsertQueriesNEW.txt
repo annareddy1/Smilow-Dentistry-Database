@@ -1,0 +1,411 @@
+--INSERT Statements for Person 
+INSERT INTO Person VALUES ('001', 'John', 'Doe', '1990-05-15', 'Caucasian'); 
+INSERT INTO Person VALUES ('002', 'Kushi', 'Malasani', '2002-04-19', 'Asian'); 
+INSERT INTO Person VALUES ('003', 'Noi', 'Sandlers', '1991-05-15', 'Hispanic'); 
+INSERT INTO Person VALUES ('004', 'Adam', 'Richards', '2003-05-15', 'Caucasian'); 
+INSERT INTO Person VALUES ('005', 'Sam', 'Liu', '1975-06-15', 'Asian'); 
+INSERT INTO Person VALUES ('006', 'Ethan', 'Anderson', '2015-05-15', 'Caucasian'); 
+INSERT INTO Person VALUES ('007', 'Ava', 'Garcia', '1990-05-15', 'Hispanic'); 
+INSERT INTO Person VALUES ('008', 'Tom', 'Halford', '2018-04-22', NULL); 
+INSERT INTO Person VALUES ('009', 'Anish', 'Venkat', '2002-08-17', 'Asian'); 
+INSERT INTO Person VALUES ('010', 'Michael', 'Dsouza', '1983-09-29',NULL); 
+INSERT INTO Person VALUES ('011', 'Sam', 'Smilow', '1999-11-15', 'Asian'); 
+INSERT INTO Person VALUES ('012', 'Chris', 'Briney', '2001-06-14', 'Hispanic'); 
+INSERT INTO Person VALUES ('013', 'Gavin', 'Casalegno', '2012-01-23',NULL); 
+INSERT INTO Person VALUES ('014', 'Bruno', 'Gold', '2002-08-17', 'Hispanic'); 
+INSERT INTO Person VALUES ('015', 'Rohan', 'Konchada', '1983-12-01', 'Asian'); 
+
+--INSERT Statements for INSURANCE_POLICY
+INSERT INTO INSURANCE_POLICY VALUES ('5001', 'Dental Care Policy', 'Health', 'Delta Dental', 1234567891, '9 months', 1500, '501');
+INSERT INTO INSURANCE_POLICY VALUES ('5002', 'Dental Plus Policy', 'Health', 'Blue Cross Blue Shield', 1234598762, '12 months', 1300, '502');
+INSERT INTO INSURANCE_POLICY VALUES ('5003', ' Dental Care Policy', 'Health', 'State Farm', 1990051598, '5 years', 24890, '501');
+INSERT INTO INSURANCE_POLICY VALUES ('5004', 'Dental Care Policy', 'Health', 'MetLife', 8346438926, '1 year', 2400, '501');
+INSERT INTO INSURANCE_POLICY VALUES ('5005', 'Dental Health Policy', 'Dental', 'Farmers', 9328765789, '5 months', 4500, '505');
+INSERT INTO INSURANCE_POLICY VALUES ('5006', 'Dental Plus Policy', 'Health', 'United Health', 5678298765, '10 weeks', 200, '502');
+INSERT INTO INSURANCE_POLICY VALUES ('5007', 'Dental Savings Policy', 'Dental', 'Universe Match', 8930289867, '20 years', 24000, '503');
+INSERT INTO INSURANCE_POLICY VALUES ('5008', 'Dental Plus Policy', 'Health', 'Red Cross Field', 8937903456, '10 months', 3000, '502');
+INSERT INTO INSURANCE_POLICY VALUES ('5009', 'Dental Care Policy', 'Health', 'State Brow', 8935467891, '3 months', 2000, '501');
+INSERT INTO INSURANCE_POLICY VALUES ('5010', 'Dental Care Policy', 'Health', 'GetLife', 1289402839, '6 months', 38493, '501');
+
+--INSERT Statements for Patient 
+INSERT INTO Patient VALUES('001', 100, 135,'5001'); 
+INSERT INTO Patient VALUES('002', 90, 135,'5002'); 
+INSERT INTO Patient VALUES('003', 150, 135,'5003'); 
+INSERT INTO Patient VALUES('004', 163, 135,'5004'); 
+INSERT INTO Patient VALUES('005', 200, 135,'5005'); 
+INSERT INTO Patient VALUES('006', 100, 135,'5006'); 
+INSERT INTO Patient VALUES('007', 90, 135,'5007'); 
+INSERT INTO Patient VALUES('008', 150, 135,'5008'); 
+INSERT INTO Patient VALUES('009', 163, 135,'5009'); 
+INSERT INTO Patient VALUES('010', 200, 135,'5010'); 
+
+--INSERT Statements for EmergencyContact 
+INSERT INTO EmergencyContact VALUES('001', '002','Mother'); 
+INSERT INTO EmergencyContact VALUES('003', '004','Father'); 
+INSERT INTO EmergencyContact VALUES('005', '006','Grandmother'); 
+INSERT INTO EmergencyContact VALUES('007', '008','Grandfather' ); 
+INSERT INTO EmergencyContact VALUES('009', '010','Husband'); 
+INSERT INTO EmergencyContact VALUES('002', '003', 'Wife' ); 
+INSERT INTO EmergencyContact VALUES('004', '005','Mother'); 
+INSERT INTO EmergencyContact VALUES('006','007', 'Father' ); 
+INSERT INTO EmergencyContact VALUES('008', '009','Husband'); 
+INSERT INTO EmergencyContact VALUES('010', '001','Wife'); 
+
+--INSERT Statements for Roles 
+INSERT INTO Roles VALUES ('Dentist','Medical'); 
+INSERT INTO Roles VALUES ('Dental Hygenist','Medical'); 
+INSERT INTO Roles VALUES ('Administrative','Non Medical');
+
+--INSERT Statements for Employee 
+INSERT INTO Employee VALUES ('011', 'Doctor of Dental Surgery', 15, 120000, 'Dentist'); 
+INSERT INTO Employee VALUES ('012', ' Doctor of Dental Medicine', 25, 120000, 'Dentist'); 
+INSERT INTO Employee VALUES ('013', 'Associate Degree in Dental Hygiene', 3, 70000, 'Dental Hygenist'); 
+INSERT INTO Employee VALUES ('014', 'Business', 1, 50000, 'Administrative');  
+INSERT INTO Employee VALUES ('015', 'Doctor of Dental Surgery', 10, 120000, 'Dentist'); 
+
+--INSERT Statements for MedicalEmp 
+INSERT INTO MedicalEmp VALUES('011', 'Wisdom teeth Oral Surgeon'); 
+INSERT INTO MedicalEmp VALUES('012', 'Orthodontist'); 
+INSERT INTO MedicalEmp VALUES('013', 'Child Dental Hygienist'); 
+INSERT INTO MedicalEmp VALUES('015', 'Dentist'); 
+
+--INSERT Statements for Payment
+INSERT INTO Payment VALUES ('67000001', 'Card', '001'); 
+INSERT INTO Payment VALUES ('67000002', 'Check', '002'); 
+INSERT INTO Payment VALUES ('67000003', 'Cash', '003'); 
+INSERT INTO Payment VALUES ('67000004', 'Check', '004'); 
+INSERT INTO Payment VALUES ('67000005', 'Card', '005'); 
+INSERT INTO Payment VALUES ('67000006', 'Card', '006'); 
+INSERT INTO Payment VALUES ('67000007', 'Card', '007'); 
+INSERT INTO Payment VALUES ('67000008', 'Cash', '008'); 
+INSERT INTO Payment VALUES ('67000009', 'Card', '009'); 
+INSERT INTO Payment VALUES ('67000011', 'Check', '010'); 
+
+--INSERT Statements for Cheque 
+INSERT INTO Cheque VALUES ("67000002", 1001, 123456789, 987654321);  
+INSERT INTO Cheque VALUES ("67000004", 1002, 987654321, 123456789);  
+INSERT INTO Cheque VALUES ("67000011", 1003, 456789012, 654321987);  
+
+--INSERT Statements for CardInfo 
+INSERT INTO CardInfo VALUES (1234567812345678, 'John Doe', '2023-12-01', 123); 
+INSERT INTO CardInfo VALUES (9876543298765432, 'Sam Liu', '2024-08-01', 456); 
+INSERT INTO CardInfo VALUES (5678901256789012, 'Ethan Anderson', '2023-06-01', 789); 
+INSERT INTO CardInfo VALUES (3456789034567890, 'Ava Garcia', '2024-03-01', 234); 
+INSERT INTO CardInfo VALUES (7890123478901234, 'Anish Venkat', '2022-11-01', 567); 
+
+--INSERT Statements for Card 
+INSERT INTO Card VALUES ("67000001",1234567812345678);  
+INSERT INTO Card VALUES ("67000005",9876543298765432);  
+INSERT INTO Card VALUES ("67000006",5678901256789012);  
+INSERT INTO Card VALUES ("67000007",3456789034567890);  
+INSERT INTO Card VALUES ("67000009",7890123478901234); 
+
+--INSERT Statements for ProcedureInfo 
+INSERT INTO ProcedureInfo VALUES ('Dental Cleaning', 'Routine cleaning', '01:00:00', 150); 
+INSERT INTO ProcedureInfo VALUES ('Tooth Extraction', 'Removal of a damaged or decayed tooth', '00:45:00', 200); 
+INSERT INTO ProcedureInfo VALUES ('Cavity Filling', 'Filling a cavity with dental material', '00:30:00', 120); 
+INSERT INTO ProcedureInfo VALUES ('Root Canal', 'Treatment of infected tooth pulp', '01:30:00', 350); 
+INSERT INTO ProcedureInfo VALUES ('Dental Crown', 'Placement of a dental crown', '01:15:00', 300); 
+
+--INSERT Statements for Procedure 
+INSERT INTO Procedure VALUES ('PROC001', 'Dental Cleaning'); 
+INSERT INTO Procedure VALUES ('PROC002', 'Tooth Extraction'); 
+INSERT INTO Procedure VALUES ('PROC003', 'Cavity Filling'); 
+INSERT INTO Procedure VALUES ('PROC004', 'Root Canal'); 
+INSERT INTO Procedure VALUES ('PROC005', 'Dental Crown'); 
+
+--INSERT Statements for Appointment 
+INSERT INTO Appointment VALUES ('10000001', 'Scheduled', 'Cleaning', 'Room 1B', '2023-08-12', '03:00 PM', '001'); 
+INSERT INTO Appointment VALUES ('10000002', 'Canceled', 'Extraction', 'Room 1A', '2023-07-12', '02:00 PM', '002'); 
+INSERT INTO Appointment VALUES ('10000003', 'Completed', 'Cleaning', 'Room 2B', '2023-08-05', '01:00 PM', '003'); 
+INSERT INTO Appointment VALUES ('10000004', 'No Show', 'Cleaning', 'Room 2A', '2023-06-12', '11:00 AM', '004'); 
+INSERT INTO Appointment VALUES ('10000005', 'Scheduled', 'Filling', 'Room 5B', '2023-09-10', '03:00 PM', '005'); 
+INSERT INTO Appointment VALUES ('10000006', 'Scheduled', 'Cleaning', 'Room 4A', '2023-08-06', '10:00 AM', '006'); 
+INSERT INTO Appointment VALUES ('10000007', 'Completed', 'Cleaning', 'Room 7A', '2023-10-23', '03:00 PM', '007'); 
+INSERT INTO Appointment VALUES ('10000008', 'Scheduled', 'Root Canal', 'Room 6B', '2023-11-12', '09:30 PM', '008'); 
+INSERT INTO Appointment VALUES ('10000009', 'Canceled', 'Dentures', 'Room 1B', '2023-10-25', '12:00 PM', '009'); 
+INSERT INTO Appointment VALUES ('10000011', 'No Show', 'Cleaning', 'Room 2A', '2023-06-13', '11:15 PM', '010'); 
+
+--INSERT Statements for INVOICE 
+INSERT INTO INVOICE VALUES (1, "810 Forest Dr, Columbus, OH, 46708", "2023-08-12", 370.05, '2023-08-13','5001' , '10000001');  
+INSERT INTO INVOICE VALUES (2, "703 Forest Dr, Columbus, OH, 46708", "2023-07-12", 300.05, '2023-07-13','5002', '10000002');  
+INSERT INTO INVOICE VALUES (3, "100 Honey Dr, Columbus, OH, 46702", "2023-08-05", 80.17, '2023-08-05','5003' , '10000003');  
+INSERT INTO INVOICE VALUES (4, "21 Lane Dr, Columbus, OH, 46734", "2023-06-12", 270.05, '2023-06-13','5004' , '10000004');  
+INSERT INTO INVOICE VALUES (5, "56 Money Ave, Columbus, OH, 43708", "2023-09-10", 745.00, '2023-09-11','5005' , '10000005');  
+INSERT INTO INVOICE VALUES (6, "818 Forest Dr, Columbus, OH, 46708", "2023-08-06", 423.56, '2023-11-06','5006' , '10000006');  
+INSERT INTO INVOICE VALUES (7, "550 Hunter Ave, Columbus, OH, 45608", "2023-10-23", 220.75, '2023-10-26','5007', '10000007');  
+INSERT INTO INVOICE VALUES (8, "23 Youth Dr, Columbus, OH, 46768", "2023-11-12", 6560.05, '2023-11-13','5008' , '10000008');  
+INSERT INTO INVOICE VALUES (9, "567 Grinch Dr, Columbus, OH, 45408", "2023-10-25", 370.05, '2023-10-25','5009' , '10000009');  
+INSERT INTO INVOICE VALUES (10, "12 Sentra Dr, Columbus, OH, 12308", "2023-06-13", 764.08, '2023-11-14','5010' , '10000011'); 
+
+--INSERT Statements for Supply
+INSERT INTO Supply VALUES ('2001', '2020-03-04', 20, 409, '2020-03-04', 'Surgical'); 
+INSERT INTO Supply VALUES ('2002', '2021-06-09', 40, 38191, '2020-03-04', 'Administrative'); 
+INSERT INTO Supply VALUES ('2003', '2022-09-04', 45, 39347, '2020-03-04', 'Injection-Control'); 
+INSERT INTO Supply VALUES ('2004', '2023-03-08', 100, 382910, '2020-03-04', 'Diagnostic'); 
+INSERT INTO Supply VALUES ('2005', '2022-05-09', 100, 372810, '2020-03-04', 'Preventative'); 
+INSERT INTO Supply VALUES ('2006', '2021-06-10', 42, 27382, '2020-03-04', 'Orthodontic'); 
+INSERT INTO Supply VALUES ('2007', '2020-09-07', 74, 10000, '2020-03-04', 'Surgical'); 
+INSERT INTO Supply VALUES ('2008', '2019-10-04', 32, 93729, '2020-03-04', 'Diagnostic'); 
+INSERT INTO Supply VALUES ('2009', '2018-03-03', 98, 63526, '2020-03-04', 'Infection-Control'); 
+INSERT INTO Supply VALUES ('2010', '2021-02-10', 1000, 29011, '2020-03-04', 'Administrative'); 
+
+--INSERT Statements for USES 
+INSERT INTO USES VALUES ('2001', 'PROC001', 2); 
+INSERT INTO USES VALUES ('2002', 'PROC002', 1);  
+INSERT INTO USES VALUES ('2003', 'PROC003', 3);  
+INSERT INTO USES VALUES ('2004', 'PROC004', 2);  
+INSERT INTO USES VALUES ('2005', 'PROC005', 2);  
+INSERT INTO USES VALUES ('2006', 'PROC001', 5);  
+INSERT INTO USES VALUES ('2007', 'PROC002', 10);  
+INSERT INTO USES VALUES ('2008', 'PROC003', 1);  
+INSERT INTO USES VALUES ('2009', 'PROC004', 1);  
+INSERT INTO USES VALUES ('2010', 'PROC005', 2); 
+
+ --INSERT Statements for CHARGES
+INSERT INTO CHARGES VALUES ('PROC001', 1,  1); 
+INSERT INTO CHARGES VALUES ('PROC002', 2,  1); 
+INSERT INTO CHARGES VALUES ('PROC003', 3,  2); 
+INSERT INTO CHARGES VALUES ('PROC004', 4,  1); 
+INSERT INTO CHARGES VALUES ('PROC005', 5,  1); 
+INSERT INTO CHARGES VALUES ('PROC001', 6,  1); 
+INSERT INTO CHARGES VALUES ('PROC002', 7,  2); 
+INSERT INTO CHARGES VALUES ('PROC003', 8,  1); 
+INSERT INTO CHARGES VALUES ('PROC004', 9,  2); 
+INSERT INTO CHARGES VALUES ('PROC005', 10,  4); 
+
+--INSERT Statements for GOES_TO 
+INSERT INTO GOES_TO VALUES (1, "67000001", "2023-08-13", 370.05); 
+INSERT INTO GOES_TO VALUES (2, "67000002", "2023-07-13", 290.00); 
+INSERT INTO GOES_TO VALUES (3, "67000003", "2023-08-05", 80.17); 
+INSERT INTO GOES_TO VALUES (4, "67000004", "2023-06-13", 270.05); 
+INSERT INTO GOES_TO VALUES (5, "67000005", "2023-09-11", 700.05); 
+INSERT INTO GOES_TO VALUES (6, "67000006", "2023-08-06", 423.56); 
+
+--INSERT Statements for ASSOCIATED  
+INSERT INTO ASSOCIATED VALUES ('5001', 'PROC001');  
+INSERT INTO ASSOCIATED VALUES ('5002', 'PROC002');  
+INSERT INTO ASSOCIATED VALUES ('5003', 'PROC003');  
+INSERT INTO ASSOCIATED VALUES ('5004', 'PROC004');  
+INSERT INTO ASSOCIATED VALUES ('5005', 'PROC005');  
+INSERT INTO ASSOCIATED VALUES ('5006', 'PROC001');  
+INSERT INTO ASSOCIATED VALUES ('5007', 'PROC002');  
+INSERT INTO ASSOCIATED VALUES ('5008', 'PROC003');  
+INSERT INTO ASSOCIATED VALUES ('5009', 'PROC004');  
+INSERT INTO ASSOCIATED VALUES ('5010', 'PROC005'); 
+
+--INSERT Statements for Address 
+INSERT INTO Address VALUES ('4001', 'Cityville', 'California', '123 Main Street', 00078); 
+INSERT INTO Address VALUES ('4002', 'Cityville', 'California', '456 Meditation Lane', 00089); 
+INSERT INTO Address VALUES ('4003', 'Cityville', 'California', '24 Silver Canoe Way', 00044); 
+INSERT INTO Address VALUES ('4004', 'Cityville', 'California', '59 Gental Rain Drive', 00089); 
+INSERT INTO Address VALUES ('4005', 'Cityville', 'California', '3009 Melody Drive', 00048); 
+INSERT INTO Address VALUES ('4006', 'Cityville', 'California', '909 Gold Trout Way', 00074); 
+INSERT INTO Address VALUES ('4007', 'Cityville', 'California', '48 Singer Lane', 00098); 
+INSERT INTO Address VALUES ('4008', 'Cityville', 'California', '26 Silver Canoe Way', 00047); 
+INSERT INTO Address VALUES ('4009', 'Cityville', 'California', '700 Gold Trout Way', 00074); 
+INSERT INTO Address VALUES ('4010', 'Cityville', 'California', '347 Main Street', 00084); 
+
+--INSERT Statements for HAS_ADDRESS
+INSERT INTO HAS_ADDRESS VALUES ('4001', '001');  
+INSERT INTO HAS_ADDRESS VALUES ('4002', '002');  
+INSERT INTO HAS_ADDRESS VALUES ('4003', '003');  
+INSERT INTO HAS_ADDRESS VALUES ('4004', '004');  
+INSERT INTO HAS_ADDRESS VALUES ('4005', '005');  
+INSERT INTO HAS_ADDRESS VALUES ('4006', '006');  
+INSERT INTO HAS_ADDRESS VALUES ('4007', '007');  
+INSERT INTO HAS_ADDRESS VALUES ('4008', '008');  
+INSERT INTO HAS_ADDRESS VALUES ('4009', '009');  
+INSERT INTO HAS_ADDRESS VALUES ('4010', '010'); 
+
+--INSERT Statements for Licensure 
+INSERT INTO Licensure VALUES ('31.008232', 'Hygienist', '12/31/2023',  '011'); 
+INSERT INTO Licensure VALUES ('51.041717', 'Radiographer', '12/31/2024', '012' ); 
+INSERT INTO Licensure VALUES ('GA.000104', 'GA', '12/31/2025', '013' ); 
+INSERT INTO Licensure VALUES ('IV.000085', 'IV', '12/31/2023', '014' ); 
+
+--INSERT Statements for COMPLETES_PROCEDURE 
+INSERT INTO COMPLETES_PROCEDURE VALUES ('PROC001', '31.008232', '2023-08-12', '03:00:00'); 
+INSERT INTO COMPLETES_PROCEDURE VALUES ("PROC002", '51.041717', '2023-07-12', '02:00:00');  
+INSERT INTO COMPLETES_PROCEDURE VALUES ('PROC003', 'GA.000104', '2023-08-05', '01:00:00');  
+INSERT INTO COMPLETES_PROCEDURE VALUES ("PROC004", 'IV.000085', "2023-06-12", '11:00:00');  
+INSERT INTO COMPLETES_PROCEDURE VALUES ("PROC005", '31.008232', '2023-09-10', '03:00:00');  
+INSERT INTO COMPLETES_PROCEDURE VALUES ('PROC001', '31.008232', '2023-08-06', '10:00:00');  
+INSERT INTO COMPLETES_PROCEDURE VALUES ('PROC002', '51.041717', '2023-11-12', '09:30:00'); 
+
+--INSERT Statements for Prescription
+INSERT INTO Prescription VALUES ('1400001', 'Kenalog', '500mg', 'twice a day', '001'); 
+INSERT INTO Prescription VALUES ('1400002', 'Amoxicillin', '250mg', 'four times a day', '002' ); 
+INSERT INTO Prescription VALUES ('1400003', 'Brufen', '400mg', 'once a day', '003'); 
+INSERT INTO Prescription VALUES ('1400004', 'Difene', '50mg', 'twice a day', '004'); 
+INSERT INTO Prescription VALUES ('1400005', 'Flagyl', '200mg', 'after every meal', '005'); 
+INSERT INTO Prescription VALUES ('1400006', 'Kopen', '250mg', 'twice a day', '006'); 
+INSERT INTO Prescription VALUES ('1400007', 'Nortem', '10mg', 'wake up and before sleep', '007'); 
+INSERT INTO Prescription VALUES ('1400008', 'Pinamox', '500mg', 'twice a day', '008'); 
+INSERT INTO Prescription VALUES ('1400009', 'Tradol', '50mg', 'twice a day', '009'); 
+INSERT INTO Prescription VALUES ('1400011', 'Zydol', '50mg', 'once a day','010' ); 
+
+--INSERT Statements for Assigned 
+INSERT INTO Assigned VALUES ('10000001','011',"N/A");  
+INSERT INTO Assigned VALUES ('10000002','012','Schedule appt for 2 weeks');  
+INSERT INTO Assigned VALUES ('10000003','013','Schedule appt for 1 month');  
+INSERT INTO Assigned VALUES ('10000004','015','N/A');  
+INSERT INTO Assigned VALUES ('10000005','011','Checkup on x next visit');  
+INSERT INTO Assigned VALUES ('10000006','012','N/A');  
+INSERT INTO Assigned VALUES ('10000007','013','Reschedule appt');  
+INSERT INTO Assigned VALUES ('10000008','015','N/A');  
+INSERT INTO Assigned VALUES ('10000009','011','N/A');  
+INSERT INTO Assigned VALUES ('10000011','012','Prescribed Brufen'); 
+
+--INSERT Statements for PRESCRIBES 
+INSERT INTO PRESCRIBES VALUES ('011', '1400001', '2022-09-04');  
+INSERT INTO PRESCRIBES VALUES ('012', '1400002','2021-07-05');  
+INSERT INTO PRESCRIBES VALUES ('013', '1400004','2022-03-04');  
+INSERT INTO PRESCRIBES VALUES ('015', '1400005','2021-06-03');  
+INSERT INTO PRESCRIBES VALUES ('013', '1400006','2020-08-06');  
+INSERT INTO PRESCRIBES VALUES ('012', '1400007','2022-05-01');  
+INSERT INTO PRESCRIBES VALUES ('011', '1400008','2023-01-01');  
+INSERT INTO PRESCRIBES VALUES ('012', '1400009','2021-03-09');  
+INSERT INTO PRESCRIBES VALUES ('015', '1400011','2021-02-04'); 
+
+--INSERT Statements for Allergy 
+INSERT INTO Allergy VALUES ('6001', ' Penicillin ', 'skin rash, itching', '2022-03-15'); 
+INSERT INTO Allergy VALUES ('6002', ' Amoxicillin ', 'swelling face', '2021-08-22'); 
+INSERT INTO Allergy VALUES ('6003', 'Latex', 'redness, itching', '2023-01-10'); 
+INSERT INTO Allergy VALUES ('6004', 'Ibuprofen', 'difficulty breathing', '2023-04-18'); 
+INSERT INTO Allergy VALUES ('6005', 'Dental Anesthetics', 'nausea, dizziness', '2022-11-05'); 
+INSERT INTO Allergy VALUES ('6006', 'Latex', 'itching', '2022-05-15'); 
+INSERT INTO Allergy VALUES ('6007', 'Amoxicillin', 'difficulty breathing', '2021-05-15'); 
+INSERT INTO Allergy VALUES ('6008', 'Penicillin', 'itching', '2020-05-15'); 
+INSERT INTO Allergy VALUES ('6009', 'Ibuprofen', 'redness', '2023-06-15'); 
+INSERT INTO Allergy VALUES ('6010', 'Penicilin', 'swelling face', '2021-05-10'); 
+
+--INSERT Statements for ALLERGIC_TO 
+INSERT INTO ALLERGIC_TO VALUES ('6001','001'); 
+INSERT INTO ALLERGIC_TO VALUES ('6002','002'); 
+INSERT INTO ALLERGIC_TO VALUES ('6003','003'); 
+INSERT INTO ALLERGIC_TO VALUES ('6004','004'); 
+INSERT INTO ALLERGIC_TO VALUES ('6005','005'); 
+INSERT INTO ALLERGIC_TO VALUES ('6006','006'); 
+INSERT INTO ALLERGIC_TO VALUES ('6007','007'); 
+INSERT INTO ALLERGIC_TO VALUES ('6008','008'); 
+INSERT INTO ALLERGIC_TO VALUES ('6009','009'); 
+INSERT INTO ALLERGIC_TO VALUES ('6010','010'); 
+
+--INSERT Statements for Medication 
+INSERT INTO Medication VALUES ('10001', ' Amoxicillin ', '500 mg', 30, '2023-01-01'); 
+INSERT INTO Medication VALUES ('10002', ' Lidocaine ', '2 % solution', 50, '2022-08-19'); 
+INSERT INTO Medication VALUES ('10003', ' Ibuprofen ', '200 mg', 40, '2022-10-15'); 
+INSERT INTO Medication VALUES ('10004', ' Chlorhexidine ', '0.12% solution', 50, '2023-02-14'); 
+INSERT INTO Medication VALUES ('10005', ' Acetaminophen ', '500 mg', 4, '2023-04-17'); 
+INSERT INTO Medication VALUES ('10006', ' Clindamycin ', '150 mg', 25, '2021-11-05'); 
+INSERT INTO Medication VALUES ('10007', ' Oxycodone ', '5 mg', 10, '2023-06-06'); 
+INSERT INTO Medication VALUES ('10008', ' Mepivacaine ', '3 % solution', 90, '2022-12-27'); 
+INSERT INTO Medication VALUES ('10009', ' Diazepam ', '5 mg', 7, '2023-01-07'); 
+INSERT INTO Medication VALUES ('10010', ' Fluoride Varnish ', '1 tube', 1, '2022-07-07'); 
+
+--INSERT Statements for USES_MEDICATION
+INSERT INTO USES_MEDICATION VALUES ('10001', '001'); 
+INSERT INTO USES_MEDICATION VALUES ('10002', '002'); 
+INSERT INTO USES_MEDICATION VALUES ('10003', '003'); 
+INSERT INTO USES_MEDICATION VALUES ('10004', '004'); 
+INSERT INTO USES_MEDICATION VALUES ('10005', '005'); 
+INSERT INTO USES_MEDICATION VALUES ('10006', '006'); 
+INSERT INTO USES_MEDICATION VALUES ('10007', '007'); 
+INSERT INTO USES_MEDICATION VALUES ('10008', '008'); 
+INSERT INTO USES_MEDICATION VALUES ('10009', '009'); 
+INSERT INTO USES_MEDICATION VALUES ('10010', '010'); 
+
+--INSERT Statements for IS_RELATED_TO
+INSERT INTO IS_RELATED_TO VALUES ('001','002'); 
+INSERT INTO IS_RELATED_TO VALUES ('002','003'); 
+INSERT INTO IS_RELATED_TO VALUES ('003','004'); 
+INSERT INTO IS_RELATED_TO VALUES ('004','005'); 
+INSERT INTO IS_RELATED_TO VALUES ('005','006'); 
+INSERT INTO IS_RELATED_TO VALUES ('006','007'); 
+INSERT INTO IS_RELATED_TO VALUES ('007','008'); 
+INSERT INTO IS_RELATED_TO VALUES ('008','009'); 
+INSERT INTO IS_RELATED_TO VALUES ('009','010'); 
+INSERT INTO IS_RELATED_TO VALUES ('010','001'); 
+
+--INSERT Statements for MEDICAL_HISTORY 
+INSERT INTO MEDICAL_HISTORY VALUES ('001', ' Up-to-date ', '2022-05-20', '2023-01-15');  
+INSERT INTO MEDICAL_HISTORY VALUES ('002', ' Current ', '2021-11-10', '2023-02-28');  
+INSERT INTO MEDICAL_HISTORY VALUES ('003', ' Updated ', '2023-01-05', '2023-03-10');  
+INSERT INTO MEDICAL_HISTORY VALUES ('004', ' Pending ', '2022-08-15', '2023-04-02');  
+INSERT INTO MEDICAL_HISTORY VALUES ('005', ' Expired ', '2020-12-02', '2023-03-20');  
+INSERT INTO MEDICAL_HISTORY VALUES ('006', ' Up-to-date ', '2022-09-18', '2023-02-10');  
+INSERT INTO MEDICAL_HISTORY VALUES ('007', ' Current ', '2022-11-30', '2023-01-25');  
+INSERT INTO MEDICAL_HISTORY VALUES ('008', ' Updated ', '2022-07-12', '2023-03-05');  
+INSERT INTO MEDICAL_HISTORY VALUES ('009', ' Pending ', '2022-03-28', '2023-04-15');  
+INSERT INTO MEDICAL_HISTORY VALUES ('010', ' Expired ', '2021-06-05', '2023-02-18'); 
+
+--INSERT Statements for PERSON_TYPE
+INSERT INTO PERSON_TYPE VALUES ('Employee', '011'); 
+INSERT INTO PERSON_TYPE VALUES ('Employee', '012'); 
+INSERT INTO PERSON_TYPE VALUES ('Employee', '013'); 
+INSERT INTO PERSON_TYPE VALUES ('Employee', '014'); 
+INSERT INTO PERSON_TYPE VALUES ('Employee', '015'); 
+INSERT INTO PERSON_TYPE VALUES ('Patient', '001'); 
+INSERT INTO PERSON_TYPE VALUES ('Patient', '002'); 
+INSERT INTO PERSON_TYPE VALUES ('Patient', '003'); 
+INSERT INTO PERSON_TYPE VALUES ('Patient', '004'); 
+INSERT INTO PERSON_TYPE VALUES ('Patient', '005'); 
+INSERT INTO PERSON_TYPE VALUES ('Patient', '006'); 
+INSERT INTO PERSON_TYPE VALUES ('Patient', '007'); 
+INSERT INTO PERSON_TYPE VALUES ('Patient', '008'); 
+INSERT INTO PERSON_TYPE VALUES ('Patient', '009'); 
+INSERT INTO PERSON_TYPE VALUES ('Patient', '010'); 
+INSERT INTO PERSON_TYPE VALUES ('Emergency Contact', '001'); 
+INSERT INTO PERSON_TYPE VALUES ('Emergency Contact', '002'); 
+INSERT INTO PERSON_TYPE VALUES ('Emergency Contact', '003'); 
+INSERT INTO PERSON_TYPE VALUES ('Emergency Contact', '004'); 
+INSERT INTO PERSON_TYPE VALUES ('Emergency Contact', '005'); 
+
+--INSERT Statements for Person_Email
+INSERT INTO Person_Email VALUES ('Person1@gmail.com', '001'); 
+INSERT INTO Person_Email VALUES ('Person2@yahoo.com', '002'); 
+INSERT INTO Person_Email VALUES ('Person3@hotmail.com', '003'); 
+INSERT INTO Person_Email VALUES ('Person4@aol.com', '004'); 
+INSERT INTO Person_Email VALUES ('Person5@gmail.com', '005'); 
+INSERT INTO Person_Email VALUES ('Person6@outlook.com', '006'); 
+INSERT INTO Person_Email VALUES ('Person7@gmail.com', '007'); 
+INSERT INTO Person_Email VALUES ('Person8@gmail.com', '008'); 
+INSERT INTO Person_Email VALUES ('Person9@gmail.com', '009'); 
+INSERT INTO Person_Email VALUES ('Person11@gmail.com', '010'); 
+
+--INSERT Statements for Person_Phone  
+INSERT INTO Person_Phone VALUES ('0000000000', '001'); 
+INSERT INTO Person_Phone VALUES ('1111111111', '002'); 
+INSERT INTO Person_Phone VALUES ('2222222222', '003'); 
+INSERT INTO Person_Phone VALUES ('3333333333', '004'); 
+INSERT INTO Person_Phone VALUES ('4444444444', '005'); 
+INSERT INTO Person_Phone VALUES ('5555555555', '006'); 
+INSERT INTO Person_Phone VALUES ('6666666666', '007'); 
+INSERT INTO Person_Phone VALUES ('7777777777', '008'); 
+INSERT INTO Person_Phone VALUES ('8888888888', '009'); 
+INSERT INTO Person_Phone VALUES ('9999999999', '010'); 
+
+--INSERT Statements for PastOperation
+INSERT INTO PastOperation VALUES ('D0120','001'); 
+INSERT INTO PastOperation VALUES ('D0140','002'); 
+INSERT INTO PastOperation VALUES ('D0145','003'); 
+INSERT INTO PastOperation VALUES ('D0150','004'); 
+INSERT INTO PastOperation VALUES ('D0160','005'); 
+INSERT INTO PastOperation VALUES ('D0170','006'); 
+INSERT INTO PastOperation VALUES ('D0171','007'); 
+INSERT INTO PastOperation VALUES ('D0180','008'); 
+INSERT INTO PastOperation VALUES ('D0191','009'); 
+INSERT INTO PastOperation VALUES ('D0210','010'); 
+
+--INSERT Statements for MedicalConditions 
+INSERT INTO MedicalConditions VALUES ('A69.0','001'); 
+INSERT INTO MedicalConditions VALUES ('A69.1','002'); 
+INSERT INTO MedicalConditions VALUES ('B00.2','003'); 
+INSERT INTO MedicalConditions VALUES ('B00.9','004'); 
+INSERT INTO MedicalConditions VALUES ('B37.0','005'); 
+INSERT INTO MedicalConditions VALUES ('B37.9','006'); 
+INSERT INTO MedicalConditions VALUES ('C80.1','007'); 
+INSERT INTO MedicalConditions VALUES ('G47.63','008'); 
+INSERT INTO MedicalConditions VALUES ('G89.29','009'); 
+INSERT INTO MedicalConditions VALUES ('J32.9','010'); 

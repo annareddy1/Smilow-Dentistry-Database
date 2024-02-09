@@ -1,0 +1,13 @@
+--OUTER JOIN – Find all the names of medical employees and their corresponding licensures if they have one.
+SELECT P.firstname, P.lastname, L.licensetype FROM 
+PERSON P, MedicalEmp M LEFT OUTER JOIN Licensure L 
+ON M.EmployeeID = L.MedEmployeeID WHERE P.PersonID = M.EmployeeID; 
+
+--AGGREGATE FUNCTION – Make a list of Medical Employess who have written prescriptions, and the number of prescriptions they wrote. 
+SELECT P.firstname, P.lastname, COUNT(PR.prescriptionid) AS "PrescriptionsWritten" 
+FROM Person P, PRESCRIBES PR WHERE PR.EmployeeID = P.PersonID GROUP BY PR.EmployeeID; 
+
+--“EXTRA” ENTITIES FROM PART 1 – Find the supplies that cost more than a $100 for the procedure root canal. 
+SELECT P.procedurename AS "ProcedureName", S.supplytype, S.Cost 
+FROM SUPPLY S, USES U, Procedure P WHERE S.supplyid = U.SupplyID 
+AND P.ProcedureID = U.ProcedureID AND S.Cost > 100 AND P.ProcedureName = 'Root Canal'; 

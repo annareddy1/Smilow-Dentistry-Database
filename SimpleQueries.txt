@@ -1,0 +1,78 @@
+--A) Create a list of patients and the medications they currently take. Sort your list by patient’s last name and medication name in alphabetical order. 
+--Include other applicable details such as date prescribed and dosage
+
+SELECT P.FirstName, P.LastName, M.name, M.dosage, M.PrescribedDate   
+FROM Person P, Medication M, Uses_Medication U   
+WHERE P.personID = U.patientID AND U.MedicationID = M.MedicationID ORDER by P.lastname, M.name; 
+
+
+
+--B) Display patient information for patients who currently have Delta Dental insurance policy
+
+SELECT P.PersonID, P.FirstName, P.LastName, P.DOB  
+FROM Person P, Patient A, Insurance_Policy I   
+WHERE A.policyID = I.policyID AND P.personID = A.PersonID AND InsuranceCompany = "Delta Dental"; 
+
+
+
+--C) Generate a list of procedures and dates of service performed by doctor Smilow.
+SELECT R.ProcedureName, C.Date  
+
+FROM Licensure L, Person P, Completes_Procedure C , Procedure R  
+WHERE P.personID =  L.MedEmployeeID AND L.LicenseNo = C.LicenseID AND C.ProcedureID = R.ProcedureID 
+AND P.LastName = 'Smilow'; 
+
+
+
+--D) Print out a list of past due invoices with patient contact information. Past due is defined as over 30 days old with a balance over $10.
+
+SELECT I.InvoiceNo, I.Date, P.FirstName, P.LastName, PPP.phone, I.PaymentAmount - G.PayAmt AS "Balance"  
+FROM INVOICE I, GOES_TO G, Payment PY, PERSON P, PERSON_PHONE PPP, CHARGES C, PROCEDURE PR  
+WHERE I.InvoiceNo = G.InvoiceNo AND PY.PayID = G.PayID AND PY.PatientID = P.PersonID  
+AND P.personid = PPP.PersonID AND C.InvoiceNo = I.InvoiceNo AND C.ProcedureID = PR.ProcedureID 
+AND JULIANDAY(strftime('now')) - JULIANDAY(strftime(I.Date)) > 30 AND I.PaymentAmount - G.PayAmt > 10;  
+
+
+--E) Find the patients who brought the most revenue in the past year. You can define how many records you want to display in the result of this query
+
+SELECT P.FirstName, P.lastname, SUM(G.PayAmt) AS "TotalRevenue" FROM GOES_TO G, PAYMENT PY, PERSON P 
+WHERE G.PayID = PY.PayID AND PY.PatientID = P.PersonID AND strftime('%Y', G.PayDate) = strftime('%Y', 'now') 
+GROUP BY P.PersonID ORDER BY SUM(G.PayAmt) DESC LIMIT 5; 
+
+
+
+--F) Create a list of doctors who performed less than 5 procedures this year.
+
+SELECT P.firstname,P.lastname, count(*) AS "Procedures Completed"  
+FROM Person P,COMPLETES_PROCEDURE C, Licensure L    
+WHERE P.personid = L.MedEmployeeID AND L.LicenseNo = C.LicenseID AND strftime('%Y', C.Date) = strftime('%Y', 'now')   
+GROUP BY L.LicenseNo   
+HAVING count(*) < 5; 
+
+
+
+--G) Find the highest paying procedures, procedure price, and the total number of thoseprocedures performed. Sort your list with highest paying procedures showing at the top of your list.
+
+SELECT P.ProcedureID, P.ProcedureName, I.cost, COUNT(*) AS "Procedures Performed" 
+FROM Procedure P, ProcedureInfo I, COMPLETES_PROCEDURE C  
+WHERE P.procedurename = I.ProcedureName AND P.ProcedureID = C.ProcedureID  
+GROUP By P.ProcedureID  
+ORDER By I.Cost DESC; 
+
+
+
+--H) Create a list of all payment types accepted, number of times each of them was used, and total amount charged to that type of payment.
+
+SELECT P.paytype, count(*) AS "Times Used", SUM(G.PayAmt) AS "Total Charged Amount"  
+FROM Payment P, GOES_TO G  
+WHERE P.PayID = G.PayID  
+GROUP By P.PayType; 
+
+
+
+--I) Find the name of the most popular insurance plan currently used by the patients
+
+SELECT I.policyname, COUNT(I.planid) AS "TimesUsed" 
+FROM INSURANCE_POLICY I 
+GROUP BY I.planid 
+ORDER BY "TimesUsed" DESC LIMIT 1; 

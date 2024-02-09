@@ -1,0 +1,30 @@
+--Insert + Delete Statement 1 
+INSERT INTO Person VALUES ('016', 'Zayne', 'Harlow', '1983-12-01', 'Asian'); 
+INSERT INTO Patient VALUES('016', 200, 135,NULL); 
+DELETE FROM Patient WHERE personid='016';
+DELETE FROM Person WHERE personid='016';
+
+
+--Insert + Delete Statement 2
+INSERT INTO Payment VALUES ('67000012', 'Card', '010'); 
+INSERT INTO CardInfo VALUES (7890123478901235, 'Zayne Harlow', '2022-11-01', 567); 
+INSERT INTO Card VALUES ("67000012",7890123478901235); 
+DELETE FROM Card WHERE payid='67000012'; 
+DELETE FROM CardInfo WHERE CardNo=7890123478901235;
+DELETE FROM Payment WHERE payid='67000012'; 
+
+
+--Insert + Delete Statement 3
+INSERT INTO ProcedureInfo VALUES ('Dental Checkup', 'routine checkup', '01:15:00', 300); 
+INSERT INTO Procedure VALUES ('PROC006', 'Dental Checkup'); 
+DELETE FROM Procedure WHERE procedureid='PROC006';
+DELETE FROM ProcedureInfo WHERE procedureName='Dental Checkup';
+
+
+--Insert + Delete Statement 4
+INSERT INTO Person VALUES ('017', 'Amy', 'Medland', '1983-12-01', 'Asian'); 
+INSERT INTO Patient VALUES('017', 200, 135,NULL); 
+INSERT INTO MEDICAL_HISTORY VALUES ('017', ' Expired ', '2021-06-05', '2023-02-18'); 
+DELETE FROM MEDICAL_HISTORY WHERE PatientID='017';
+DELETE FROM Patient WHERE personid='017';
+DELETE FROM Person WHERE personid='017';
