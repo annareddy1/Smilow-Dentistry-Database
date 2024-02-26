@@ -1,6 +1,6 @@
 # Smilow-Dentistry-Database
 
-#### Team members: Anish Venkat, Rithika Annareddy, Kushi Malasani, Rohan Konchada
+#### Team members: Rithika Annareddy, Anish Venkat, Kushi Malasani, Rohan Konchada
 
 ### Report
 
